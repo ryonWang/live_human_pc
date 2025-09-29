@@ -1,5 +1,3 @@
-# Marketing Creator Pro Max PC 项目说明（框架、代码结构与业务逻辑综述）
-
 ## 项目概述
 本项目为桌面与网页双端的内容创作工具，前端基于 Vue 3 + Vite + Element Plus + Pinia，桌面端通过 Tauri 集成（Rust）。代码结构清晰，模块化拆分，对中文友好。
 
