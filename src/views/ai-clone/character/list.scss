@@ -1,0 +1,19 @@
+@import "@/styles/_variables";
+.page {
+  .global-search-cell {
+    padding-top: 20px;
+  }
+  
+  .video-cell {
+    margin-top: 20px;
+    width: 100%;
+  }
+}
+
+@media (max-width: 1600px) {
+  .page {
+    .global-search-cell {
+      padding-top: 20px;
+    }
+  }
+}

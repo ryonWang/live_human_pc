@@ -1,0 +1,314 @@
+@import "@/styles/_variables";
+.page {
+  padding: 32px 24px;
+  border-radius: 6px;
+  background: #1B1B1C;
+  .main-content {
+    padding-top: 40px;
+    display: flex;
+    .left {
+      width: 65%;
+      padding-right: 64px;
+      border-right: 1px solid #505051;
+      .video-cell {
+        width: 100%;
+      }
+      .demand-cell {
+        padding-top: 40px;
+        p {
+          font-size: 20px;
+          font-weight: 500;
+          line-height: 32px;
+        }
+      }
+      .tip-cell {
+        padding-top: 40px;
+        display: flex;
+        align-items: center;
+        img {
+          width: 20px;
+          height: 20px;
+          display: block;
+        }
+        p {
+          padding-left: 16px;
+          font-size: 18px;
+          color: #919191;
+          font-weight: 400;
+          line-height: 24px;
+        }
+      }
+    }
+    .right {
+      width: 35%;
+      padding-left: 64px;
+      display: flex;
+      flex-direction: column;
+      .form-label {
+        font-size: 20px;
+        line-height: 28px;
+        font-weight: 500;
+        padding-bottom: 40px;
+      }
+      .form-content {
+        padding-bottom: 40px;
+        ::v-deep .el-input {
+          .el-input__wrapper {
+            background: #252528;
+          }
+        }
+        .tauri-upload-cell {
+          border-radius: 6px;
+          background: #252528;
+          height: 240px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          cursor: pointer;
+          .el-upload__text {
+            font-size: 20px;
+            line-height: 28px;
+            color: $--color-main;
+            font-weight: 500;
+            span {
+              color: #919191;
+            }
+          }
+        }
+        .upload-cell {
+          ::v-deep .el-upload-dragger {
+            border: none;
+            border-radius: 6px;
+            background: #252528;
+            height: 240px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0;
+          }
+          .el-upload__text {
+            font-size: 20px;
+            line-height: 28px;
+            color: $--color-main;
+            font-weight: 500;
+            span {
+              color: #919191;
+            }
+          }
+        }
+        .file-name {
+          margin-top: 30px;
+          padding: 0 74px 0 20px;
+          height: 48px;
+          background: #252528;
+          border-radius: 6px;
+          font-size: 20px;
+          line-height: 48px;
+          position: relative;
+          .icon {
+            font-size: 24px;
+            position: absolute;
+            right: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+          }
+        }
+        .upload-tip {
+          text-align: center;
+          padding-top: 40px;
+          font-size: 18px;
+          line-height: 28px;
+          font-weight: 500;
+          color: #919191;
+        }
+      }
+      .switch-cell {
+        display: flex;
+        align-items: center;
+        p {
+          font-size: 20px;
+          font-weight: 400;
+          line-height: 28px;
+          padding-right: 16px;
+        }
+      }
+      .checkbox-cell {
+        padding-top: 24px;
+        display: flex;
+        align-items: center;
+        ::v-deep .el-checkbox__label {
+          display: none;
+        }
+        .agree {
+          padding-left: 16px;
+          font-size: 20px;
+          font-weight: 400;
+          line-height: 28px;
+          span {
+            color: $--color-main;
+            cursor: pointer;
+          }
+        }
+      }
+      .btn-cell {
+        padding-top: 24px;
+        .tip-cell {
+          font-size: 14px;
+          line-height: 20px;
+          font-weight: 400;
+          color: #DE2C2C;
+          padding-bottom: 24px;
+        }
+        .btn {
+          background:$--color-main-gradient;
+          height: 48px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          border-radius: 6px;
+          box-shadow: 0 2px 0 0 rgba(0,0,0,0.02);
+          cursor: pointer;
+          img {
+            width: 24px;
+            height: 24px;
+            display: block;
+          }
+          .text {
+            padding-left: 16px;
+            color: #ffffff;
+            line-height: 28px;
+            font-size: 20px;
+            font-weight: 600;
+          }
+        }
+      }
+    }
+  }
+  .protocol-cell {
+    height: 400px;
+    overflow-y: auto;
+    .sub-title {
+      padding-top: 24px;
+      font-size: 20px;
+      line-height: 28px;
+    }
+    .text {
+      padding-top: 12px;
+      font-size: 14px;
+      line-height: 20px;
+    }
+  }
+}
+
+@media (max-width: 1600px) {
+  .page {
+    padding: 24px 16px;
+    border-radius: 4px;
+    .main-content {
+      padding-top: 16px;
+      .left {
+        flex: 2;
+        padding-right: 48px;
+        .demand-cell {
+          padding-top: 24px;
+          p {
+            font-size: 14px;
+            line-height: 24px;
+          }
+        }
+        .tip-cell {
+          padding-top: 24px;
+          img {
+            width: 14px;
+            height: 14px;
+          }
+          p {
+            padding-left: 12px;
+            font-size: 12px;
+            line-height: 18px;
+          }
+        }
+      }
+      .right {
+        padding-left: 52px;
+        .form-label {
+          font-size: 14px;
+          line-height: 20px;
+          padding-bottom: 24px;
+        }
+        .form-content {
+          padding-bottom: 24px;
+          .tauri-upload-cell {
+            border-radius: 4px;
+            height: 170px;
+            .el-upload__text {
+              font-size: 14px;
+              line-height: 20px;
+            }
+          }
+          .upload-cell {
+            ::v-deep .el-upload-dragger {
+              border-radius: 4px;
+              height: 170px;
+            }
+            .el-upload__text {
+              font-size: 14px;
+              line-height: 20px;
+            }
+          }
+          .file-name {
+            padding: 0 54px 0 20px;
+            height: 34px;
+            border-radius: 4px;
+            font-size: 14px;
+            line-height: 34px;
+            .icon {
+              font-size: 18px;
+              right: 12px;
+            }
+          }
+          .upload-tip {
+            padding-top: 32px;
+            font-size: 14px;
+            line-height: 20px;
+          }
+        }
+        .switch-cell {
+          p {
+            font-size: 14px;
+            line-height: 20px;
+            padding-right: 12px;
+          }
+        }
+        .checkbox-cell {
+          padding-top: 0;
+          .agree {
+            padding-left: 12px;
+            font-size: 14px;
+            line-height: 20px;
+          }
+        }
+        .btn-cell {
+          .tip-cell {
+            font-size: 12px;
+            line-height: 14px;
+            padding-bottom: 16px;
+          }
+          .btn {
+            height: 34px;
+            border-radius: 4px;
+            box-shadow: 0 1px 0 0 rgba(0,0,0,0.02);
+            img {
+              width: 16px;
+              height: 16px;
+            }
+            .text {
+              line-height: 20px;
+              font-size: 14px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

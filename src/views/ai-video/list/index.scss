@@ -1,0 +1,53 @@
+.page {
+  padding: 32px 24px;
+  border-radius: 6px;
+  background: #1B1B1C;
+  .global-search-cell {
+    .search-item {
+      .input {
+        width: 210px;
+      }
+      ::v-deep .datePicker {
+        width: 310px;
+      }
+    }
+  }
+  .table-cell {
+    padding-top: 16px;
+    .video-cover {
+      cursor: pointer;
+      display: block;
+      width: 160px;
+    }
+  }
+  ::v-deep .global-dialog {
+    background: transparent;
+    padding: 0;
+    box-shadow: none;
+    margin: 10vh auto 0;
+  }
+}
+@media (max-width: 1600px) {
+  .page {
+    padding: 24px 16px;
+    border-radius: 4px;
+    .global-search-cell {
+      .search-item {
+        .input {
+          width: 172px;
+        }
+        ::v-deep .datePicker {
+          width: 240px;
+        }
+      }
+    }
+    .table-cell {
+      padding-top: 8px;
+      .video-cover {
+        cursor: pointer;
+        display: block;
+        width: 114px;
+      }
+    }
+  }
+}

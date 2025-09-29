@@ -1,0 +1,43 @@
+{
+  "name": "my-vite-app",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "before:dev": "vite --mode beforeDev",
+    "before:build": "vite build --mode beforeBuild",
+    "tauri:dev": "tauri dev",
+    "tauri:build": "tauri build",
+    "tauri:build:debug": "tauri build --debug"
+  },
+  "dependencies": {
+    "@element-plus/icons-vue": "2.1.0",
+    "@tauri-apps/api": "^2.0.2",
+    "@tauri-apps/plugin-clipboard-manager": "^2.0.0",
+    "@tauri-apps/plugin-dialog": "^2.0.0",
+    "@tauri-apps/plugin-fs": "^2.0.0",
+    "@tauri-apps/plugin-os": "^2.0.0",
+    "@tauri-apps/plugin-process": "^2.0.0",
+    "@tauri-apps/plugin-shell": "^2.0.0",
+    "@tauri-apps/plugin-updater": "^2.0.0",
+    "@tauri-apps/plugin-upload": "^2.1.0",
+    "axios": "1.6.2",
+    "dayjs": "^1.11.13",
+    "element-plus": "2.4.2",
+    "lodash": "4.17.21",
+    "pinia": "2.0.33",
+    "qs": "6.11.2",
+    "sass": "1.69.5",
+    "vue": "^3.5.10",
+    "vue-cookies": "1.8.3",
+    "vue-drag-resize": "^1.5.4",
+    "vue-router": "4.2.5"
+  },
+  "devDependencies": {
+    "@tauri-apps/cli": "^2.0.2",
+    "@vitejs/plugin-vue": "^5.1.4",
+    "vite": "^5.4.8"
+  }
+}

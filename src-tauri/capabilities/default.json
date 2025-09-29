@@ -1,0 +1,48 @@
+{
+  "$schema": "../gen/schemas/desktop-schema.json",
+  "identifier": "default",
+  "description": "enables the default permissions",
+  "windows": [
+    "main"
+  ],
+  "permissions": [
+    "core:default",
+    "core:window:allow-close",
+    "core:window:allow-minimize",
+    "core:window:allow-start-dragging",
+    "core:window:allow-toggle-maximize",
+    "core:window:allow-set-always-on-top",
+    "core:path:default",
+    "shell:default",
+    "shell:allow-execute",
+    "dialog:default",
+    "fs:default",
+    "fs:read-all",
+    "fs:scope",
+    "fs:read-dirs",
+    "clipboard-manager:default",
+    "clipboard-manager:allow-read-image",
+    "clipboard-manager:allow-read-text",
+    {
+      "identifier": "shell:allow-execute",
+      "allow": [
+        {
+          "name": "backend/app",
+          "sidecar": true
+        },
+        {
+          "name": "explorer",
+          "cmd": "explorer",
+          "args": true
+        },
+        {
+          "name": "open",
+          "cmd": "open",
+          "args": true
+        }
+      ]
+    },
+    "os:default",
+    "upload:default"
+  ]
+}

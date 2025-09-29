@@ -1,0 +1,246 @@
+@import "@/styles/_variables";
+.login-cell {
+  min-height: $--full-height;
+  background: url("@assets/images/login_bg.png") no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 15%;
+  .left {
+    .title-cell {
+      display: flex;
+      align-items: center;
+      img {
+        width: 100px;
+        height: 100px;
+        display: block;
+      }
+      p {
+        padding-left: 32px;
+        font-size: 50px;
+        line-height: 70px;
+        font-weight: 600;
+      }
+    }
+    h2 {
+      padding-top: 40px;
+      margin: 0;
+      font-size: 40px;
+      line-height: 60px;
+      font-weight: 600;
+    }
+    ul {
+      padding: 60px 0 0 20px;
+      margin: 0;
+      li {
+        font-size: 24px;
+        line-height: 72px;
+        font-weight: 500;
+      }
+    }
+  }
+  .right {
+    width: 704px;
+    height: 630px;
+    box-sizing: border-box;
+    padding: 32px;
+    // 使用统一变量的透明毛玻璃样式与圆角、阴影
+    background: $--glass-bg;
+    backdrop-filter: blur($--glass-blur-lg);
+    -webkit-backdrop-filter: blur($--glass-blur-lg);
+    border: 1px solid $--glass-border;
+    border-radius: $--radius-lg;
+    box-shadow: $--shadow-lg;
+    h2 {
+      font-size: 36px;
+      line-height: 80px;
+      font-weight: 500;
+      margin: 0;
+    }
+    .login-form {
+      padding-top: 50px;
+      overflow: hidden;
+      ::v-deep .el-form-item {
+        margin-bottom: 54px;
+      }
+      ::v-deep .el-input {
+        height: 80px;
+        font-size: 24px;
+        --el-input-icon-color: #ffffff;
+        --el-input-clear-hover-color: #ffffff;
+        .el-input__wrapper {
+          // 输入框统一为毛玻璃风格
+          background: $--glass-input-bg;
+          backdrop-filter: blur($--glass-input-blur);
+          -webkit-backdrop-filter: blur($--glass-input-blur);
+          border: 1px solid $--glass-input-border;
+          border-radius: 10px;
+        }
+        .el-input__password {
+          font-size: 20px;
+        }
+      }
+    }
+    .login-btn {
+      margin-top: 16px;
+      height: 80px;
+      background: $--color-main-gradient;
+      line-height: 80px;
+      text-align: center;
+      cursor: pointer;
+      font-size: 28px;
+      font-weight: 600;
+      border-radius: 6px;
+    }
+  }
+}
+@media (max-width: 1600px) {
+  .login-cell {
+    // 响应式下保持整页背景图
+    background: url("@assets/images/login_bg.png") no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 160px;
+    .left {
+      .title-cell {
+        display: flex;
+        align-items: center;
+        img {
+          width: 100px;
+          height: 100px;
+          display: block;
+        }
+        p {
+          padding-left: 24px;
+          font-size: 36px;
+          line-height: 60px;
+          font-weight: 600;
+        }
+      }
+      h2 {
+        padding-top: 32px;
+        margin: 0;
+        font-size: 36px;
+        line-height: 60px;
+        font-weight: 600;
+      }
+      ul {
+        padding: 32px 0 0 20px;
+        margin: 0;
+        li {
+          font-size: 20px;
+          line-height: 52px;
+          font-weight: 500;
+        }
+      }
+    }
+    .right {
+      width: 520px;
+      height: 448px;
+      box-sizing: border-box;
+      padding: 32px;
+      // 响应式下的透明毛玻璃与圆角
+      background: rgba(255, 255, 255, 0.12);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.22);
+      border-radius: 12px;
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
+      h2 {
+        font-size: 24px;
+        line-height: 56px;
+        font-weight: 500;
+        margin: 0;
+      }
+      .login-form {
+        padding-top: 32px;
+        overflow: hidden;
+        ::v-deep .el-form-item {
+          margin-bottom: 32px;
+        }
+        ::v-deep .el-input {
+          height: 64px;
+          font-size: 16px;
+          --el-input-icon-color: #ffffff;
+          --el-input-clear-hover-color: #ffffff;
+          .el-input__wrapper {
+            background: $--glass-input-bg;
+            backdrop-filter: blur($--glass-input-blur);
+            -webkit-backdrop-filter: blur($--glass-input-blur);
+            border: 1px solid $--glass-input-border;
+            border-radius: 8px;
+          }
+          .el-input__password {
+            font-size: 20px;
+          }
+        }
+      }
+      .login-btn {
+        margin-top: 16px;
+        height: 64px;
+        background: $--color-main-gradient;
+        line-height: 64px;
+        text-align: center;
+        cursor: pointer;
+        font-size: 20px;
+        font-weight: 600;
+        border-radius: 4px;
+      }
+    }
+  }
+}
+
+@media (max-width: 1600px) {
+  .right {
+    // 低分辨率下仍保持更淡的毛玻璃背景
+    background: $--glass-bg-light;
+    backdrop-filter: blur($--glass-blur-md);
+    -webkit-backdrop-filter: blur($--glass-blur-md);
+    border: 1px solid $--glass-border;
+    border-radius: $--radius-md;
+    box-shadow: $--shadow-md;
+    h2 {
+      font-size: 24px;
+      line-height: 56px;
+      font-weight: 500;
+      margin: 0;
+    }
+    .login-form {
+      padding-top: 32px;
+      overflow: hidden;
+      ::v-deep .el-form-item {
+        margin-bottom: 32px;
+      }
+      ::v-deep .el-input {
+        height: 64px;
+        font-size: 16px;
+        --el-input-icon-color: #ffffff;
+        --el-input-clear-hover-color: #ffffff;
+        .el-input__wrapper {
+          background: $--glass-input-bg;
+          backdrop-filter: blur($--glass-input-blur);
+          -webkit-backdrop-filter: blur($--glass-input-blur);
+          border: 1px solid $--glass-input-border;
+          border-radius: 8px;
+        }
+        .el-input__password {
+          font-size: 20px;
+        }
+      }
+    }
+    .login-btn {
+      margin-top: 16px;
+      height: 64px;
+      background: $--color-main-gradient;
+      line-height: 64px;
+      text-align: center;
+      cursor: pointer;
+      font-size: 20px;
+      font-weight: 600;
+      border-radius: 4px;
+    }
+  }
+}

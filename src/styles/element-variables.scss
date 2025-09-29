@@ -1,0 +1,346 @@
+// element-plus
+html.dark {
+  --el-color-primary: #5CDAFD;
+  --el-menu-item-height: 54px;
+  --el-menu-sub-item-height: 54px;
+  --el-menu-bg-color: #252528;
+  --el-menu-text-color: #ffffff;
+  --el-menu-active-color: #5CDAFD;
+  --el-menu-base-level-padding: 44px;
+  --el-menu-level-padding: 26px;
+}
+@media (max-width: 1600px) {
+  html.dark {
+    --el-menu-base-level-padding: 24px;
+    --el-menu-level-padding: 20px;
+    --el-font-size-base: 12px;
+    --el-menu-item-height: 44px;
+    --el-menu-sub-item-height: 44px;
+  }
+}
+.el-table {
+  .empty-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+    .empty-image {
+      width: 160px;
+      height: 160px;
+      display: block;
+    }
+    .empty-text {
+      padding-top: 16px;
+      font-size: 14px;
+      line-height: 20px;
+    }
+  }
+  .el-table__inner-wrapper::before {
+    display: none;
+  }
+  .cell {
+    padding: 0 20px;
+    font-size: 20px;
+    font-weight: 500;
+    .el-button {
+      font-size: 20px;
+    }
+  }
+  .el-table__header {
+    thead {
+      color: #919191;
+      font-size: 14px;
+      font-weight: 500;
+    }
+    tr {
+      th.el-table__cell {
+        background: #343337;
+        height: 76px;
+        border-bottom: none;
+      }
+      td.el-table__cell {
+        height: 76px;
+      }
+    }
+  }
+  .el-table__body {
+    tr {
+      background: #343337;
+      height: 76px;
+      &:hover {
+        td.el-table__cell {
+          background: none;
+        }
+      }
+      &.dark {
+        background: #27252E;
+      }
+      td {
+        color: #ffffff;
+        border: none !important;
+      }
+    }
+  }
+  .status-cell {
+    display: flex;
+    align-items: center;
+    .point {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      margin-right: 16px;
+      &.green {
+        background: #41F132;
+      }
+      &.red {
+        background: #F13232;
+      }
+      &.orange {
+        background: #F16832;
+      }
+    }
+  }
+}
+@media (max-width: 1600px) {
+  .el-table {
+    .cell {
+      font-size: 14px;
+      .el-button {
+        font-size: 14px;
+      }
+    }
+    .el-table__header {
+      tr {
+        th.el-table__cell {
+          height: 54px;
+        }
+        td.el-table__cell {
+          height: 54px;
+        }
+      }
+    }
+    .el-table__body {
+      tr {
+        height: 54px;
+      }
+    }
+    .status-cell {
+      .point {
+        width: 4px;
+        height: 4px;
+        margin-right: 8px;
+      }
+    }
+  }
+}
+.el-button {
+  &.is-link {
+    text-decoration: underline;
+  }
+  &.is-disabled.is-link {
+    text-decoration: none;
+  }
+  &.el-button--primary.is-link:hover {
+    color: $--color-main-hover;
+  }
+  &.el-button--danger.is-link {
+    color: $--color-warning;
+    &:hover {
+      color: $--color-warning-hover;
+    }
+  }
+  &.el-button--warning.is-link {
+    color: $--color-warning;
+    &:hover {
+      color: $--color-warning-hover;
+    }
+  }
+}
+@media (max-width: 1600px) {
+  .el-button {
+    height: 24px;
+    padding: 4px 8px;
+  }
+}
+.pagination-box {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-top: 24px;
+  .total {
+    padding-right: 48px;
+    font-size: 20px;
+    font-weight: 400;
+    color: #919191;
+    line-height: 28px;
+  }
+  .el-pagination {
+    .btn-prev {
+      background: none;
+      color: #ffffff;
+      margin-right: 8px;
+      .el-icon {
+        font-size: 16px;
+      }
+    }
+    .btn-next {
+      background: none;
+      color: #ffffff;
+      margin-left: 8px;
+      .el-icon {
+        font-size: 16px;
+      }
+    }
+    .el-pager {
+      li {
+        background: none;
+        border: 1px solid #505051;
+        border-radius: 9px;
+        margin: 0 8px;
+        color: #ffffff;
+        font-size: 20px;
+        font-weight: 400;
+        min-width: 40px;
+        height: 40px;
+        &.is-active {
+          border: none;
+          background: $--color-main;
+        }
+        &.more {
+          border: none;
+          margin: 0;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 1600px) {
+  .pagination-box {
+    .total {
+      padding-right: 34px;
+      font-size: 14px;
+      line-height: 20px;
+    }
+    .el-pagination {
+      .btn-prev {
+        margin-right: 0;
+      }
+      .btn-next {
+        margin-right: 0;
+      }
+      .el-pager {
+        li {
+          border-radius: 6px;
+          margin: 0 6px;
+          font-size: 14px;
+          min-width: 28px;
+          height: 28px;
+        }
+      }
+    }
+  }
+}
+.el-input {
+  height: 48px;
+  font-size: 20px;
+  .el-input__wrapper {
+    background: #343337;
+    border-radius: 6px;
+    border: none;
+    box-shadow: none;
+    .el-input__inner {
+      color: #ffffff;
+    }
+    .el-input__suffix {
+      color: #ffffff;
+    }
+  }
+}
+@media (max-width: 1600px) {
+  .el-input {
+    height: 34px;
+    font-size: 14px;
+    .el-input__wrapper {
+      border-radius: 4px;
+    }
+  }
+}
+.el-checkbox {
+  .el-checkbox__input {
+    .el-checkbox__inner {
+      width: 24px;
+      height: 24px;
+      border: none;
+      background: url("@assets/images/icon/ele_checkbox_uncheck.png");
+      background-size: cover;
+    }
+    &.is-checked {
+      .el-checkbox__inner {
+        width: 24px;
+        height: 24px;
+        border: none;
+        background: url("@assets/images/icon/ele_checkbox_checked.png");
+        background-size: cover;
+      }
+      .el-checkbox__inner::after {
+        display: none;
+      }
+    }
+    &.is-indeterminate {
+      .el-checkbox__inner {
+        width: 24px;
+        height: 24px;
+        border: none;
+        background: url("@assets/images/icon/ele_checkbox_indeterminate.png");
+        background-size: cover;
+      }
+      .el-checkbox__inner::before {
+        display: none;
+      }
+    }
+  }
+}
+@media (max-width: 1600px) {
+  .el-checkbox {
+    .el-checkbox__input {
+      .el-checkbox__inner {
+        width: 16px;
+        height: 16px;
+      }
+      &.is-checked {
+        .el-checkbox__inner {
+          width: 16px;
+          height: 16px;
+        }
+      }
+      &.is-indeterminate {
+        .el-checkbox__inner {
+          width: 16px;
+          height: 16px;
+        }
+      }
+    }
+  }
+}
+.el-dialog {
+  padding: 32px;
+  background: #1B1B1C;
+  .el-dialog__header {
+    padding: 0;
+    margin: 0;
+  }
+  .el-dialog__body {
+    padding: 0;
+    margin: 0;
+  }
+}
+.el-popover.el-popper {
+  border-color: $--color-main;
+  background: #343337;
+  padding: 0;
+  &.is-light .el-popper__arrow::before {
+    border-color: $--color-main;
+    background: #343337;
+  }
+}
